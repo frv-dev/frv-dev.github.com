@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
 
@@ -45,6 +45,9 @@
           <a class="nav-link js-scroll-trigger" href="#experience">Experiência</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#projects">Projetos</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#education">Educação</a>
         </li>
         <li class="nav-item">
@@ -71,7 +74,7 @@
           (12) 98100-3037 -
           <a href="mailto:feliperenanvieira@gmail.com">feliperenanvieira@gmail.com</a>
         </div>
-        <p class="lead mb-5">Sou um desenvolvedor web fullstack que ama o que faz, trabalho com Javascript, PHP e Typescript e também sou o fundador da Code Easy, um projeto de programador para programadores com o lema: <i><b>"Aprenda de forma simples e prática"</b></i>.</p>
+        <p class="lead mb-5">Sou um desenvolvedor web fullstack de <span id="age"></span> anos que ama o que faz, trabalho com Javascript, Python, PHP e Typescript e também sou o fundador da Code Easy, um projeto de programador para programadores com o lema: <i><b>"Aprenda de forma simples e prática"</b></i>.</p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/felipe-renan-vieira/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -119,6 +122,57 @@
 
       </div>
 
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+      <div class="w-100">
+        <h2 class="mb-5">Projetos</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0"><a href="https://codeeasy.com.br" target="_blank">Code Easy - Aprenda de Forma Simples e Prática</a></h3>
+            <div class="subheading mb-3">Um projeto com o objetivo de transmitir o conhecimento para outros programadores.</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span>Setembro de 2017 - Até o Momento</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0"><a href="https://github.com/codeeasy-dev/codeeasy-raffle" target="_blank">Code Easy Raffle</a></h3>
+            <div class="subheading mb-3">Um simples sistema de sorteio feito com React e Typescript</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span>Agosto de 2019</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Easy Parking - (Projeto de Faculdade)</h3>
+            <div class="subheading mb-3">Gerencie o Seu Estacionamento de Qualquer Lugar e a Qualquer Hora!</div>
+            <p>Projeto que tinha como objetivo construir um sistema que fornecesse uma API permitindo que um estacionamento pudesse ter qualquer tipo de equipamento para registro de entrada e saída de veículos desde que pudesse conectar com a API REST para fornecer os dados para o sistema.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span>2º Semestre de 2018 - Desativado - Usado apenas para fins acadêmicos.</span>
+          </div>
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Odin Browser - (TCC do Curso Técnico)</h3>
+            <div class="subheading mb-3">Navegador Web Feito em Python</div>
+            <p>O Odin Browser foi um navegador web feito em Python com a biblioteca PyQT tendo as funcionalidades básicas de um navegador consumindo menos recursos do computador e oferencendo o suficiente para quem quer apenas navegar na internet.</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span>1º Semestre de 2016 - Desativado - Usado apenas para fins acadêmicos</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <hr class="m-0">
@@ -314,9 +368,30 @@
   <script src="js/resume.min.js"></script>
 
   <script>
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+    // IDADE
+    function idade(ano_aniversario, mes_aniversario, dia_aniversario) {
+      var d = new Date,
+      ano_atual = d.getFullYear(),
+      mes_atual = d.getMonth() + 1,
+      dia_atual = d.getDate(),
+
+      ano_aniversario = +ano_aniversario,
+      mes_aniversario = +mes_aniversario,
+      dia_aniversario = +dia_aniversario,
+
+      quantos_anos = ano_atual - ano_aniversario;
+      if (mes_atual < mes_aniversario || mes_atual == mes_aniversario && dia_atual < dia_aniversario) {
+        quantos_anos--;
+      }
+
+      return quantos_anos < 0 ? 0 : quantos_anos;
+    }
+
+    document.getElementById('age').innerText = idade(2000, 5, 30);
   </script>
 
 </body>
