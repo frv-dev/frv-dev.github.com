@@ -1,64 +1,80 @@
 <!doctype html>
-<html lang="pt-BR">
+<html class="dark">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./css/main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
 </head>
 
-<body class="bg-black">
+<body class="bg-white dark:bg-black">
+  <div class="container mx-auto">
+    <main class="flex flex-col lg:flex-row text-center h-screen">
+      <section class="flex-initial my-auto lg:w-1/3 pt-10 lg:pt-0">
+        <img src="./img/profile.jpg" alt="Felipe Renan Vieira"
+          class="w-3/6 sm:w-2/6 lg:w-4/6 xl:w-3/6 mx-auto rounded-full border-4 border-black dark:border-white">
+        <h1 class="pt-3 text-3xl dark:text-white"><strong>Felipe Renan Vieira</strong></h1>
+        <h2 class="text-base dark:text-white">Desenvolvedor Back-end PHP</h2>
 
-  <div class="container">
-    <main class="row">
-      <section class="col-12 col-lg-4 text-center mt-auto mb-auto">
-        <img src="./img/profile.jpg" alt="Felipe Renan Vieira" class="image-profile mb-3 border border-2 border-white">
-        <h2 class="text-white">Felipe Renan Vieira</h2>
-        <p class="text-white">Desenvolvedor Back-end PHP</p>
+        <div class="flex flex-row mx-auto w-2/6 xl:w-2/6 lg:w-2/4 sm:w-1/4 pt-1">
+          <a href="https://github.com/frv-dev" target="_blank" class="flex-initial w-1/4">
+            <i class="fa-brands fa-github text-2xl text-dark dark:text-white"></i>
+          </a>
+          <a href="https://linkedin.com/in/felipe-renan-vieira/" target="_blank" class="flex-initial w-1/4">
+            <i class="fa-brands fa-linkedin text-2xl text-blue-500"></i>
+          </a>
+          <a href="https://instagram.com/felipe.renan.vieira/" target="_blank" class="flex-initial w-1/4">
+            <i class="fa-brands fa-instagram text-2xl text-red-600"></i>
+          </a>
+          <a href="https://facebook.com/felipe.r.vieira.5" target="_blank" class="flex-initial w-1/4">
+            <i class="fa-brands fa-facebook text-2xl text-blue-500"></i>
+          </a>
+        </div>
 
-        <div class="row mr-auto">
-          <div class="col-2 offset-2 col-sm-1 offset-sm-4 col-lg-2 offset-lg-2">
-            <a href="https://github.com/frv-dev" target="_blank" class="text-light">
-              <i class="bi bi-github fs-3"></i>
-            </a>
+        <hr class="w-1/2 mx-auto mt-2">
+
+        <p class="text-xs dark:text-white pt-2">Copyright © 2023 Felipe Renan Vieira</p>
+      </section>
+
+      <section class="flex-initial my-auto lg:w-2/3 pt-10 lg:pt-0 pb-10 lg:pb-0">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mx-24">
+          <div
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Sobre mim</strong></h3>
+            <p>Meu foco é ser dev back-end, mas tenho muito mais do que disso. Clique aqui para ver! 😁</p>
           </div>
-          <div class="col-2 col-sm-1 col-lg-2">
-            <a href="https://linkedin.com/in/felipe-renan-vieira/" target="_blank" class="text-primary">
-              <i class="bi bi-linkedin fs-3"></i>
-            </a>
+          <div
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Portifólio</strong></h3>
+            <p>Agora os projetos, aqui você pode ver o que eu já desenvolvi. 😮</p>
           </div>
-          <div class="col-2 col-sm-1 col-lg-2">
-            <a href="https://instagram.com/felipe.renan.vieira/" target="_blank" class="text-danger">
-              <i class="bi bi-instagram fs-3"></i>
-            </a>
+          <div
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Experiência e Educação</strong></h3>
+            <p>Faculdades, cursos, trabalhos, é aqui que você pode ver a minha carreira. 📖</p>
           </div>
-          <div class="col-2 col-sm-1 col-lg-2">
-            <a href="https://facebook.com/felipe.r.vieira.5" target="_blank" class="text-primary">
-              <i class="bi bi-facebook fs-3"></i>
-            </a>
-          </div>
+          <a href="./Currículo.pdf" target="_blank"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Currículo</strong></h3>
+            <p>Também deixei o meu currículo aqui para você visualizar! 📝</p>
+          </a>
+          <a href="https://youtube.com/CodeEasy" target="_blank"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2 md:col-start-2">
+            <h3 class="text-xl"><strong>Code Easy</strong></h3>
+            <p>Criei um projeto educativo para ensinar às outras pessoas sobre o mundo da programação. 👨‍💻</p>
+          </a>
         </div>
       </section>
-      <section class="col-12 col-lg-8 text-center mt-auto mb-auto">
-        <h1 class="text-white">Cards</h1>
-      </section>
     </main>
-
-    <footer class="row fixed-bottom text-center">
-      <p class="text-white">Copyright © 2023 Felipe Renan Vieira</p>
-    </footer>
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>
