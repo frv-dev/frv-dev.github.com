@@ -30,6 +30,11 @@ function changeThemeButton() {
   }
 }
 
+/**
+ * This funcion is called in HTML document in the onclick property
+ *
+ * Example: <button onclick="switchTheme()">Theme Switcher</button>
+ */
 function switchTheme() {
   changeStorageTheme()
   setTheme()
