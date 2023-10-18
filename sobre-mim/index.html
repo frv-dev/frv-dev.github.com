@@ -1,0 +1,157 @@
+<!doctype html>
+<html class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+
+<body class="bg-white dark:bg-black">
+  <div class="container mx-auto dark:text-white text-left py-24 px-10 md:px-14">
+    <main>
+      <div class="flex flex-row">
+        <a href="./../" class="text-xl flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+
+        <button onclick="switchTheme(true)" class="
+          flex-initial
+          bg-white dark:bg-black
+          right-8 lg:right-10
+          bottom-8 lg:bottom-10
+          rounded-full
+          w-20 h-9
+          border-4
+          border-black dark:border-white
+          text-yellow-500
+          transition duration-150
+        ">
+          <i class="fa-solid fa-moon text-lg" id="themeButton"></i>
+        </button>
+      </div>
+
+      <hr class="mt-3 border-black dark:border-white" />
+
+      <h1 class="text-2xl pt-3"><strong>Prazer, sou o Felipe Renan Vieira! 😁✌</strong></h1>
+
+      <span class="text-base">
+        <p class="pt-5">Sou um Programador Back-end PHP desde 2016 e estudo sobre a área de tecnologia desde 2014.
+        </p>
+
+        <p class="pt-5">Só que não só de PHP e Back-end vive um programador, por exemplo, olha esse site, foi
+          feito a mão, <span onclick="switchTheme(true)" class="cursor-pointer text-blue-500"><b>CLIQUE AQUI</b></span>
+          para
+          você ver o que acontece.
+        </p>
+
+        <p class="pt-5">Legal, não é? <a href="./../js/themeController.js" target="_blank"
+            class="text-blue-500 hover:underline"><b>NESSE
+              LINK</b></a> está um simples código JS que consegue fazer essa alteração entre <i>light/dark</i> em
+          conjunto com o TailwindCSS.
+        </p>
+
+        <p class="pt-5">É uma pequena e humilde demonstração dos meus conhecimentos e de que eu também
+          atuo em outras áreas além do back-end.</p>
+
+        <p class="pt-5 text-3xl"><strong>Hard Skills:</strong></p>
+
+        <ul class="pt-5 list-disc list-inside">
+          <li>Back-end com PHP;</li>
+          <li>Front-end com HTML5, CSS, TailwindCSS, JavaScript, TypeScript e React;</li>
+          <li>SGBDs e Banco de Dados: MySQL, SQLite e PostgreSQL;</li>
+          <li>Frameworks: Laravel / Lumen, Slim Framework, PHPUnit;</li>
+          <li>Versionamento com Git e conhecimento em plataformas como Github e Gitlab;</li>
+          <li>Containers com Docker;</li>
+          <li>Conhecimento básico no uso de Linux e do terminal;</li>
+          <li>Programação Estruturada e Orientada a Objetos;</li>
+          <li>Conhecimento em TDD (Test Driven Development - Desenvolvimento Orientado a Testes);</li>
+          <li>Conhecimento em SOLID, Design Patterns e Arquitetura Hexagonal; e</li>
+          <li>Conhecimento em OpenAPI e Swagger para documentação de APIs REST.</li>
+        </ul>
+
+        <p class="pt-5">Além disso tem outros pontos sobre mim.</p>
+
+        <p class="pt-5">Sou músico, toco piano, pincipalmente na igreja católica sendo ministro de música e participando
+          da RCC. 🎹</p>
+
+        <p class="pt-5">Tenho interesse na área de Games como hobbie, inclusive estou estudando desenvolvimento de games
+          na Godot Engine. 🎮</p>
+
+        <p class="pt-5">Tenho a <a href="https://youtube.com/CodeEasy" target="_blank"
+            class="text-blue-500 hover:underline"><b>Code Easy</b></a>, um projeto com o objetivo de ensinar às outras
+          pessoas sobre o mundo da programação. 👨‍💻
+        </p>
+
+        <p class="pt-5">E não vamos esquecer das hard skills que estou buscando aprender.</p>
+
+        <ul class="pt-5 list-disc list-inside">
+          <li>Aprender a trabalhar com alguns serviços da AWS;</li>
+          <li>Aprender sobre infraestrutura como código com Terraform;</li>
+          <li>Desenvolver mais os meus conhecimentos em sistemas de mensageria como Apache Kafka e RabbitMQ;</li>
+          <li>Aprender mais sobre CI/CD;</li>
+          <li>Aprender mais sobre banco de dados NoSQL; e</li>
+          <li>Outros assuntos que vão entrar no futuro nessa lista.</li>
+        </ul>
+
+        <p class="pt-5 text-3xl"><strong>Soft Skills:</strong></p>
+
+        <p class="pt-5">E é claro que elas não podem ser esquecidas.</p>
+
+        <p class="pt-5">Compreender e resolver problemas complexos, ter um pensamento crítico sobre atitudes e ações,
+          ser criativo <b>(pelo menos acho que esse site ficou criativo, por exemplo 😅)</b>,
+          trabalho em equipe, ter inteligência emocional para enfrenter diferentes tipos de situações, saber negociar e
+          conversar com outras pessoas, sejam da mesma área ou de diferentes áreas, tudo isso são cosias que eu sempre
+          dou atenção e procuro me desenvolver.</p>
+
+        <p class="pt-5">Inclusive a importante ação de conhecer o negócio e ter o foco no mesmo, programar não é só
+          escrever código, é primeiro compreender o negócio
+          e as necessidades do cliente para que seja possível resolver os seus problemas. 😉</p>
+
+        <hr class="mt-5 border-black dark:border-white" />
+
+        <p class="pt-5">Bom, esse sou eu 😁, espero que tenha gostado de me conhecer.</p>
+
+        <p class="pt-5">Ah sim, e não se esqueça de acessar as outras partes do meu site, o <a href="./../portifolio/"
+            class="text-blue-500 cursor-pointer hover:underline">Portifólio</a> e a <a
+            href="./../experiencia-e-educacao/" class="text-blue-500 cursor-pointer hover:underline">Experiência e
+            Educação</a>.</p>
+
+        <div class="mt-5 p-5 border-2 border-slate-700 rounded bg-blue-200/50 dark:bg-blue-700/25">
+          <p class="text-yellow-600">&lt;?php</p>
+
+          <p class="pt-2"><span class="text-blue-500">echo</span> <span
+              class="text-green-700">&lt;&lt;&lt;'NOWDOC'</span></p>
+
+          <p class="pt-2">PS: Esse site foi desenvolvido com essa estética de propósito, sou um programador back-end.
+          </p>
+
+          <p class="pt-2">Como é mesmo o esteriótipo do programador back-end desenvolvendo um site no front-end 😅?</p>
+
+          <p class="pt-2">Porém, por de trás dos panos ele foi feito à mão, com atenção a cada detalhe, responsivo e
+            adaptado para vários dispositivos e até com um sistema de tema <i class="text-blue-500 cursor-pointer"
+              onclick="switchTheme(true)">light/dark</i>.</p>
+
+          <p class="pt-2">Afinal como dizem em alguns casos de design, menos é mais. 😉</p>
+
+          <p class="pt-2">E ai, gostou da estética e da ideia desse site? Pode dar uma olhada no código também, simples
+            e direto ao ponto: <a href="https://github.com/frv-dev/frv-dev.github.io" target="_blank"
+              class="underline text-blue-500">https://github.com/frv-dev/frv-dev.github.io</a></p>
+
+          <p class="pt-2"><span class="text-green-700">NOWDOC</span>;</p>
+        </div>
+
+      </span>
+    </main>
+  </div>
+
+  <script src="./../js/themeController.js"></script>
+</body>
+
+</html>
