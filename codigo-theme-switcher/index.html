@@ -19,7 +19,8 @@
   <div class="container mx-auto dark:text-white text-left py-24 px-10 md:px-14">
     <main>
       <div class="flex flex-row">
-        <a href="./../" class="text-xl flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+        <a href="./../sobre-mim/" class="text-xl flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i> Voltar para
+          "Sobre mim"</a>
 
         <button onclick="switchTheme(true)" class="
           flex-initial
@@ -38,10 +39,21 @@
       </div>
 
       <hr class="mt-3 border-black dark:border-white" />
+
+      <h1 class="text-2xl pt-3"><strong>Código do tema <i>light/dark</i></strong></h1>
+
+      <pre
+        class="mt-5 p-5 border-2 border-slate-700 rounded bg-blue-200/50 dark:bg-blue-700/25 overflow-x-scroll"><code id="js-code"></code></pre>
     </main>
   </div>
 
   <script src="./../js/themeController.js"></script>
+  <script src="./../js/getThemeControllerCodeService.js"></script>
+  <script>
+      (function () {
+        getThemeControllerCodeService('js-code')
+      })()
+  </script>
 </body>
 
 </html>

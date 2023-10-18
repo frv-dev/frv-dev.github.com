@@ -11,6 +11,6 @@ end_of_line = crlf
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{html,json,css}]
+[*.{html,json,css,js}]
 indent_size = 2
 
