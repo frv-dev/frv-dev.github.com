@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* Main Scrollbar */
+
+  .main-scrollbar-light::-webkit-scrollbar-track
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: rgba(222, 222, 222, 0);
+  }
+
+  .main-scrollbar-light::-webkit-scrollbar
+  {
+    border-radius: 10px;
+    width: 12px;
+    background-color: rgba(222, 222, 222, 0.3);
+  }
+
+  .main-scrollbar-light::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #AAAAAA;
+  }
+
+
+
+  .main-scrollbar-dark::-webkit-scrollbar-track
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: rgba(222, 222, 222, 0);
+  }
+
+  .main-scrollbar-dark::-webkit-scrollbar
+  {
+    border-radius: 10px;
+    width: 10px;
+    background-color: rgba(222, 222, 222, 0.3);
+  }
+
+  .main-scrollbar-dark::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FFFFFF;
+  }
+
+  /* Mini Scrollbar */
+
+  .mini-scrollbar-light::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(222, 222, 222, 0);
+  }
+
+  .mini-scrollbar-light::-webkit-scrollbar
+  {
+    border-radius: 10px;
+    width: 5px;
+    background-color: rgba(222, 222, 222, 0.3);
+  }
+
+  .mini-scrollbar-light::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #AAAAAA;
+  }
+
+
+
+  .mini-scrollbar-dark::-webkit-scrollbar-track
+  {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: rgba(222, 222, 222, 0);
+  }
+
+  .mini-scrollbar-dark::-webkit-scrollbar
+  {
+    border-radius: 10px;
+    width: 5px;
+    background-color: rgba(222, 222, 222, 0.3);
+  }
+
+  .mini-scrollbar-dark::-webkit-scrollbar-thumb
+  {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #FFFFFF;
+  }
+}

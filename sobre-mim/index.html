@@ -7,20 +7,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
-  </script>
+  <link rel="stylesheet" href="./../css/tailwind.build.css">
 </head>
 
 <body class="bg-white dark:bg-black">
   <div class="container mx-auto dark:text-white text-left py-24 px-10 md:px-14">
     <main>
       <div class="flex flex-row">
-        <a href="javascript:history.back()" class="text-lg flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i>
-          Voltar</a>
+        <a href="./../" class="text-lg flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i>
+          Início</a>
 
         <button onclick="switchTheme()" class="
           flex-initial
@@ -52,52 +47,75 @@
           você ver o que acontece.
         </p>
 
-        <p class="pt-5">Legal, não é? <a href="./../codigo-theme-switcher/"
-            class="text-blue-500 hover:underline"><b>NESSE
-              LINK</b></a> está o simples código JS que consegue fazer essa alteração entre <i>light/dark</i> em
-          conjunto com o TailwindCSS.
-        </p>
-
-        <p class="pt-5">É uma pequena e humilde demonstração dos meus conhecimentos e de que eu também
-          atuo em outras áreas além do back-end.</p>
+        <p class="pt-5">Legal, não é? É uma pequena e humilde demonstração dos meus conhecimentos e de que eu também
+          atuo em outras áreas além do back-end como o front-end.</p>
 
         <p class="pt-5 text-3xl"><strong>Hard Skills:</strong></p>
 
         <ul class="pt-5 list-disc list-inside">
           <li>Back-end com PHP;</li>
-          <li>Front-end com HTML5, CSS, TailwindCSS, JavaScript, TypeScript e React;</li>
-          <li>SGBDs e Banco de Dados: MySQL, SQLite e PostgreSQL;</li>
-          <li>Frameworks: Laravel / Lumen, Slim Framework, PHPUnit;</li>
-          <li>Versionamento com Git e conhecimento em plataformas como Github e Gitlab;</li>
-          <li>Containers com Docker;</li>
-          <li>Conhecimento básico no uso de Linux e do terminal;</li>
-          <li>Programação Estruturada e Orientada a Objetos;</li>
-          <li>Conhecimento em TDD (Test Driven Development - Desenvolvimento Orientado a Testes);</li>
-          <li>Conhecimento em SOLID, Design Patterns e Arquitetura Hexagonal; e</li>
-          <li>Conhecimento em OpenAPI e Swagger para documentação de APIs REST.</li>
+          <li>Front-end com:
+            <ul class="ml-5 list-disc list-inside">
+              <li>HTML5;</li>
+              <li>CSS;</li>
+              <li>TailwindCSS;</li>
+              <li>JavaScript;</li>
+              <li>TypeScript;</li>
+              <li>React.</li>
+            </ul>
+          </li>
+          <li>SGBDs e Banco de Dados:
+            <ul class="ml-5 list-disc list-inside">
+              <li>MySQL;</li>
+              <li>SQLite;</li>
+              <li>PostgreSQL.</li>
+            </ul>
+          </li>
+          <li>Frameworks:
+            <ul class="ml-5 list-disc list-inside">
+              <li>Laravel / Lumen;</li>
+              <li>Slim Framework;</li>
+              <li>PHPUnit - Testes automatizados.</li>
+            </ul>
+          </li>
+          <li>Conhecimento em:
+            <ul class="ml-5 list-disc list-inside">
+              <li>Programação Estruturada;</li>
+              <li>Programação Orientada a Objetos;</li>
+              <li>Git e plataformas como Github;</li>
+              <li>TDD - Test Driven Development;</li>
+              <li>SOLID;</li>
+              <li>Design Patterns;</li>
+              <li>Arquitetura Hexagonal;</li>
+              <li>OpenAPI e Swagger;</li>
+              <li>Linux e terminal;</li>
+              <li>Containers com Docker.</li>
+            </ul>
+          </li>
         </ul>
 
         <p class="pt-5">Além disso tem outros pontos sobre mim.</p>
-
-        <p class="pt-5">Sou músico, toco piano, pincipalmente na igreja católica sendo ministro de música e participando
-          da RCC. 🎹</p>
-
-        <p class="pt-5">Tenho interesse na área de Games como hobbie, inclusive estou estudando desenvolvimento de games
-          na Godot Engine. 🎮</p>
 
         <p class="pt-5">Tenho a <a href="https://youtube.com/CodeEasy" target="_blank"
             class="text-blue-500 hover:underline"><b>Code Easy</b></a>, um projeto com o objetivo de ensinar às outras
           pessoas sobre o mundo da programação. 👨‍💻
         </p>
 
+        <p class="pt-5">Tenho interesse na área de Games como hobbie, inclusive estou estudando desenvolvimento de games
+          na Godot Engine. 🎮</p>
+
+        <p class="pt-5">Sou músico, toco piano, pincipalmente na igreja católica sendo ministro de música e participando
+          da RCC. 🎹</p>
+
         <p class="pt-5">E não vamos esquecer das hard skills que estou buscando aprender.</p>
 
         <ul class="pt-5 list-disc list-inside">
-          <li>Aprender a trabalhar com alguns serviços da AWS;</li>
-          <li>Aprender sobre infraestrutura como código com Terraform;</li>
-          <li>Desenvolver mais os meus conhecimentos em sistemas de mensageria como Apache Kafka e RabbitMQ;</li>
-          <li>Aprender mais sobre CI/CD;</li>
-          <li>Aprender mais sobre banco de dados NoSQL; e</li>
+          <li>Desenvolvimento mobile com React Native;</li>
+          <li>Serviços da AWS;</li>
+          <li>Terraform - Infraestrutura como código;</li>
+          <li>Apache Kafka e RabbitMQ;</li>
+          <li>CI/CD;</li>
+          <li>Banco de dados NoSQL; e</li>
           <li>Outros assuntos que vão entrar no futuro nessa lista.</li>
         </ul>
 
@@ -130,8 +148,7 @@
           <p class="pt-2"><span class="text-blue-500">echo</span> <span
               class="text-green-700">&lt;&lt;&lt;'NOWDOC'</span></p>
 
-          <p class="pt-2">PS: Esse site foi desenvolvido com essa estética de propósito, sou um programador back-end.
-          </p>
+          <p class="pt-2">PS: Esse site foi desenvolvido com essa estética de propósito.</p>
 
           <p class="pt-2">Como é mesmo o esteriótipo do programador back-end desenvolvendo um site no front-end 😅?</p>
 

@@ -7,20 +7,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-    }
-  </script>
+  <link rel="stylesheet" href="./../css/tailwind.build.css">
 </head>
 
-<body class="bg-white dark:bg-black">
+<body class="bg-white dark:bg-black main-scrollbar-light dark:main-scrollbar-dark">
   <div class="container mx-auto dark:text-white text-left py-24 px-10 md:px-14">
     <main>
       <div class="flex flex-row">
-        <a href="javascript:history.back()" class="text-lg flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i>
-          Voltar</a>
+        <a href="./../" class="text-lg flex-1 my-auto"><i class="fa-solid fa-arrow-left"></i>
+          Início</a>
 
         <button onclick="switchTheme()" class="
           flex-initial
@@ -43,28 +38,218 @@
       <h1 class="text-2xl mt-5"><strong>Portifólio</strong></h1>
     </main>
 
+    <!--
+        ==========================================================
+        ==========================================================
+        TABS
+        ==========================================================
+        ==========================================================
+      -->
+
     <nav class="border-b border-gray-300 dark:border-gray-600">
-      <ul class="flex justify-start">
+      <ul class="flex justify-start overflow-x-scroll no-scrollbar">
         <li role="presentation" class="mr-2">
-          <button id="personal-tab" class="p-4 font-bold">Pessoal</button>
+          <button id="personal-tab" class="p-4 font-bold border-b border-blue-500 text-blue-500">Pessoal</button>
         </li>
         <li class="mr-2">
-          <button id="enterprise-tab" class="p-4 font-bold border-b border-blue-500 text-blue-500">Empresarial</button>
+          <button id="enterprise-tab" class="p-4 font-bold">Empresarial</button>
         </li>
         <li role="presentation" class="mr-2">
-          <button id="hobbie-tab" class="p-4 font-bold">Hobbies</button>
+          <button id="game-tab" class="p-4 font-bold">Games</button>
         </li>
       </ul>
     </nav>
 
     <div id="portfolioTab" class="mt-4">
-      <section class="hidden" id="personal">Oi 2</section>
 
-      <section id="enterprise">
+      <!--
+        ==========================================================
+        ==========================================================
+        ==========================================================
+        PESSOAL
+        ==========================================================
+        ==========================================================
+        ==========================================================
+      -->
+
+      <section class="" id="personal">
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex-1 lg:pr-5">
+            <a href="https://github.com/frv-dev/contact.me" target="_blank">
+              <img src="./../img/contact-me.jpg" alt="Contact.me"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/contact.me" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Contact.me</strong></h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Esse projeto foi feito como parte do processo seletivo para entrar na empresa Netshow.me,
+                o
+                objetivo era desenvolver um formulario do contato, mas não apenas fazê-lo funcionar e sim usar o projeto
+                para demonstrar os meus conhecimentos.</p>
+
+              <p class="pt-2">Desenvolvi um projeto em Laravel usando o React, TypeScript, banco de dados com SGBD MySQL
+                e
+                um servidor de e-mails falso Mailhog.</p>
+
+              <p class="pt-2">Também foi usado o Docker para montar uma infraestrutura contendo um servidor Node para
+                transpilar o código front-end, um servidor PHP, um servidor de e-mails falso com Mailhog e um servidor
+                para banco de dados com MySQL.</p>
+
+              <p class="pt-2">A arquitetura também foi pensada isolando a aplicação back-end em Repositories, Services,
+                com o Service Mail para envio de e-mail, e Builder além da estrutura padrão do Laravel, testes
+                automatizados unitários e de feature foram criados, no front-end as requisições HTTP foram separadas na
+                camada de serviço com o axios, tem uma camada de validação com regex e os componentes visuais foram
+                isolados.</p>
+
+              <p class="pt-2">É um projeto <i>Overkill</i>, ou seja, tecnologia em exagero para um simples formulário de
+                contato, mas como dito, foi um projeto usado para demonstrar o meu conhecimento com as tecnologias
+                usadas ao mesmo tempo que eu desenvolvia a proposta do teste da empresa, num senário real a escolha de
+                tecnologias seria mais sensata.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col-reverse lg:flex-row mt-16">
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/slim-framework-skeleton" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Slim Framework
+                  Skeleton</strong>
+              </h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Esse é um projeto com fins de estudo e aprendizado apenas.</p>
+
+              <p class="pt-2">Um skeleton é um literalmente um esqueleto de projeto pré-definido que permite você baixar
+                e usar sem se preocupar com toda a configuração e arquitetura do projeto.</p>
+
+              <p class="pt-2">Ferramentas como o Laravel já trazem isso pronto e, para projetos mais específicos é mais
+                recomendável o projeto ser estruturado manualmente do que usar um skeleton pronto, por isso esse projeto
+                não foi desenvolvido para fins de uso em projetos.</p>
+
+              <p class="pt-2">O ponto forte aqui foi estudar sobre arquitetura de software, existe muito mais do que
+                escrever um código que executa uma instrução para o computador.</p>
+
+              <p class="pt-2">Esse projeto possui uma configuração pré-pronta para um ambiente com Docker com um módulo
+                para testes automatizados e variáveis de ambientes pré-configuradas.</p>
+
+              <p class="pt-2">Além disso ele possui uma arquitetura desacoplada e que foca no princípio <b>D</b> do
+                <b>SOLID</b>, Dependency Inverse Principle - Princípio da Inversão de Dependência, o que também permite
+                o uso da Arquitetura Hexagonal nesse projeto, usando do recurso de injeção de dependência implementado
+                no Slim Framework é possível criar camadas adicionais na aplicação que aqui são chamadas de
+                <b>Services</b> e que se comunicam com o core da aplicação através de interfaces, esse desacoplamento
+                permite a realização de testes unitários, uma melhor organização e uma arquitetura mais limpa além de
+                permitir a criação de dublês de testes apenas criando classes que implementem as respectivas interfaces.
+              </p>
+            </div>
+          </div>
+          <div class="flex-1 lg:pl-5">
+            <a href="https://github.com/frv-dev/slim-framework-skeleton" target="_blank">
+              <img src="./../img/slim-framework.jpg" alt="Next Tecnologia"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mt-16">
+          <div class="flex-1 lg:pr-5">
+            <a href="https://github.com/frv-dev/codeeasy-raffle" target="_blank">
+              <img src="./../img/code-easy-raffle.jpg" alt="Object1ve"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/codeeasy-raffle" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Code Easy Raffle</strong>
+              </h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>O Code Easy Raffle é o software de sorteio da Code Easy, um software simples, usado para fins didáticos
+                e, quem sabe, para futuros sorteios que possam surgir na Code Easy.</p>
+
+              <p class="pt-2">Este software foi construído para demonstrar um exemplo simples de React com TypeScript e
+                também de <b>Sistemas Distribuídos</b>, já que no diretório <code
+                  class="px-1 border-2 border-slate-700 rounded bg-blue-200/50 dark:bg-blue-700/25">src/services/</code>
+                é
+                possível desenvolver módulos que permitem a integração com qualquer sistema ou fonte que provenha os
+                dados para o sorteio (APIs REST, GraphQL, CSV, JSON, ...).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col-reverse lg:flex-row mt-16">
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/presentation-stopwatch-prototype" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Presentation Stopwatch
+                  Prototype</strong>
+              </h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Um protótipo de um sistema feito em React que tem como objetivo criar um temporizador para
+                apresentações.</p>
+
+              <p class="pt-2">É possível definir o título da apresentação, tempo da apresentação, tempo das mensagens de
+                aviso, uma mensagem de aviso e uma mensagem quando o tempo finaliza.</p>
+
+              <p class="pt-2">Assim o apresentador pode ter o controle do seu tempo de apresentação.</p>
+            </div>
+          </div>
+          <div class="flex-1 lg:pl-5">
+            <a href="https://github.com/frv-dev/presentation-stopwatch-prototype" target="_blank">
+              <img src="./../img/presentation-stopwatch-prototype.gif" alt="Next Tecnologia"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200 border-2 border-transparent dark:border-white">
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row mt-16">
+          <div class="flex-1 lg:pr-5">
+            <a href="https://github.com/frv-dev/migrations-com-php-e-phinx" target="_blank">
+              <img src="./../img/phinx.jpg" alt="Object1ve"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/migrations-com-php-e-phinx" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Migrations com PHP e
+                  Phinx</strong></h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Um projeto de estudo e aprendizado para ver como funciona a biblioteca Phinx, utilizada para criar um
+                módulo de migração para o banco de dados com PHP usando como base de teste o SGBD SQLite3.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        ==========================================================
+        ==========================================================
+        ==========================================================
+        EMPRESARIAL
+        ==========================================================
+        ==========================================================
+        ==========================================================
+      -->
+
+      <section class="hidden" id="enterprise">
         <div class="flex flex-col lg:flex-row">
           <div class="flex-1 lg:pr-5">
             <a href="https://netshow.me" target="_blank">
-              <img src="./../img/netshowme-16-9.jpg" alt="Netshow.me" class="rounded w-full">
+              <img src="./../img/netshowme-16-9.jpg" alt="Netshow.me"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
             </a>
           </div>
           <div class="flex-1 mt-5 lg:mt-0">
@@ -72,39 +257,50 @@
               <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Netshow.me</strong></h2>
             </a>
 
-            <p class="pt-5">Desenvolvimento de uma plataforma OTT (Over The Top) whitelabel para outros clientes usarem,
-              é como criar uma Netflix personalizada para outros clientes, só que com variedades de conteúdos, live de
-              show, de jogos de futebol, cursos, videos, entre outros.</p>
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Desenvolvimento de uma plataforma OTT (Over The Top) whitelabel para outros clientes usarem,
+                é como criar uma Netflix personalizada para outros clientes, só que com variedades de conteúdos, live de
+                show, de jogos de futebol, cursos, videos, entre outros.</p>
 
-            <p class="pt-2">O meu trabalho principal focava no desenvolvimento de um sistema Laravel monolítico e outro
-              sistema tendo o Laravel com uma API REST, um front-end com NextJS e TypeScript, testes automatizados,
-              sistema de cache com Redis, integração com APIs de outros sistemas internos e externos e tendo um sistema
-              de CI/CD para cada publicação em ambientes de staging, develop e production.</p>
+              <p class="pt-2">O meu trabalho principal focava no desenvolvimento de um sistema Laravel monolítico e
+                outro
+                sistema tendo o Laravel com uma API REST, um front-end com NextJS e TypeScript, testes automatizados,
+                sistema de cache com Redis, integração com APIs de outros sistemas internos e externos e tendo um
+                sistema
+                de CI/CD para cada publicação em ambientes de staging, develop e production.</p>
 
-            <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
-              internas da empresa e alguns projetos internos.</p>
+              <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
+                internas da empresa e alguns projetos internos.</p>
+            </div>
           </div>
         </div>
 
-        <div class="flex flex-col flex-col-reverse lg:flex-row mt-16">
+        <div class="flex flex-col-reverse lg:flex-row mt-16">
           <div class="flex-1 mt-5 lg:mt-0">
             <a href="https://next.tec.br" target="_blank">
               <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Next Tecnologia</strong>
               </h2>
             </a>
-            <p class="pt-5">A Next é uma empresa de tecnologia, um dos seus setores funciona como uma fábrica de
-              software.</p>
 
-            <p class="pt-5">O meu trabalho focava em desenvolvimento de aplicações web com React e Laravel, as vezes com
-              API e SPA, as vezes com sistemas monolíticos, manutenção em sites wordpress e desenvolvimento de sites
-              institucionais e landing pages.</p>
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>A Next é uma empresa de tecnologia, um dos seus setores funciona como uma fábrica de
+                software.</p>
 
-            <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
-              internas da empresa e alguns projetos veiculados a respectivos clientes da empresa.</p>
+              <p class="pt-2">O meu trabalho focava em desenvolvimento de aplicações web com React e Laravel, as vezes
+                com
+                API e SPA, as vezes com sistemas monolíticos, manutenção em sites wordpress e desenvolvimento de sites
+                institucionais e landing pages.</p>
+
+              <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
+                internas da empresa e alguns projetos veiculados a respectivos clientes da empresa.</p>
+            </div>
           </div>
           <div class="flex-1 lg:pl-5">
             <a href="https://next.tec.br" target="_blank">
-              <img src="./../img/next-tecnologia-16-9.jpg" alt="Next Tecnologia" class="rounded w-full">
+              <img src="./../img/next-tecnologia-16-9.jpg" alt="Next Tecnologia"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
             </a>
           </div>
         </div>
@@ -112,7 +308,8 @@
         <div class="flex flex-col lg:flex-row mt-16">
           <div class="flex-1 lg:pr-5">
             <a href="https://objctv.one/" target="_blank">
-              <img src="./../img/object1ve-16-9.jpg" alt="Object1ve" class="rounded w-full">
+              <img src="./../img/object1ve-16-9.jpg" alt="Object1ve"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
             </a>
           </div>
           <div class="flex-1 mt-5 lg:mt-0">
@@ -120,36 +317,113 @@
               <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Object1ve</strong></h2>
             </a>
 
-            <p class="pt-5">A Object1ve é uma empresa de operação de publicidade digital, um dos seus serviços tem o
-              foco na gerenciamente e na veiculação de anúncios através de sites para seus clientes.</p>
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>A Object1ve é uma empresa de operação de publicidade digital, um dos seus serviços tem o
+                foco na gerenciamente e na veiculação de anúncios através de sites para seus clientes.</p>
 
-            <p class="pt-5">O meu trabalho focava em desenvolver scripts em Python para automatizar o processo de
-              gerenciamento de anúncios integrando com APIs do antigo DFP (Doubleclick For Publishers), hoje conhecido
-              como Google AdManager, e desenvolver aplicações em Laravel e React para uso interno da empresa.</p>
+              <p class="pt-2">O meu trabalho focava em desenvolver scripts em Python para automatizar o processo de
+                gerenciamento de anúncios integrando com APIs do antigo DFP (Doubleclick For Publishers), hoje conhecido
+                como Google AdManager, e desenvolver aplicações em Laravel e React para uso interno da empresa.</p>
 
-            <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
-              internas da empresa e alguns projetos internos.</p>
+              <p class="pt-2">Mais informações não serão divulgadas por questão de sigilo com relação a informações
+                internas da empresa e alguns projetos internos.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="hidden" id="hobbie">Oi 3</section>
+      <!--
+        ==========================================================
+        ==========================================================
+        ==========================================================
+        GAMES
+        ==========================================================
+        ==========================================================
+        ==========================================================
+      -->
+
+      <section class="hidden" id="game">
+        <div class="flex flex-col lg:flex-row">
+          <div class="flex-1 lg:pr-5">
+            <a href="https://github.com/frv-dev/Mining-Space" target="_blank">
+              <img src="./../img/mining-space.gif" alt="Mining Space"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="https://github.com/frv-dev/Mining-Space" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Mining Space (Em
+                  desenvolvimento)</strong></h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Um jogo arcade de nave de exploração espacial com estilo pixel art, para computador e
+                smartphones android desenvolvido na <a href="https://godotengine.org/" target="_blank"
+                  class="text-blue-500 hover:underline"><b>Godot Engine</b></a>
+                <b>4.1 Standard</b>.
+              </p>
+
+              <p class="pt-2">Ainda está em desenvolvimento.</p>
+
+              <p class="pt-2">O objetivo é destruir rochas espaciais e acumular pontos o máximo possível até ter a nave
+                destruída por alguma rocha, um placar marcará as pontuações para que o jogador possa visualizar depois
+                as
+                melhores pontuações.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col-reverse lg:flex-row mt-16">
+          <div class="flex-1 mt-5 lg:mt-0">
+            <a href="" target="_blank">
+              <h2 class="text-2xl hover:text-blue-500 hover:underline cursor-pointer"><strong>Tic-tac-toe</strong>
+              </h2>
+            </a>
+
+            <div
+              class="overflow-y-auto mini-scrollbar-light dark:mini-scrollbar-dark pr-2 mt-2 max-h-64 sm:max-h-52 xl:max-h-72 2xl:max-h-80">
+              <p>Tic-tac-toe, conhecido por nós brasileiros como Jogo da Velha, foi o meu primeiro jogo
+                desenvolvido com um estilo pixel art.</p>
+
+              <p class="pt-2">O jogo já foi finalizado, mas foi desenvolvido apenas como um caso de estudo e de
+                aprendizado, por isso não possui uma versão final compilada.</p>
+
+              <p class="pt-2">Caso queira usar o mesmo só é necessário baixar a versão <b>4.0 Standard</b> da <a
+                  href="https://godotengine.org/" target="_blank" class="text-blue-500 hover:underline"><b>Godot
+                    Engine</b></a>,
+                abrir o projeto e executar com F5.</p>
+
+              <p class="pt-2">Vale ressaltar que, caso queira fazer a própria build ele foi pensado para dispositivos
+                móveis, então você pode fazer a build para android, para iOS em teoria é possível, mas ainda não foi
+                testado.</p>
+            </div>
+          </div>
+          <div class="flex-1 lg:pl-5">
+            <a href="https://github.com/frv-dev/tic-tac-toe" target="_blank">
+              <img src="./../img/tic-tac-toe.gif" alt="Tic-tac-toe"
+                class="rounded w-full opacity-100 hover:opacity-80 dark:opacity-80 dark:hover:opacity-100 transition duration-200">
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
   <script src="./../js/themeController.js"></script>
   <script src="./../js/tabController.js"></script>
   <script>
-      (function () {
-        tabController(
-          ['border-b', 'border-blue-500', 'text-blue-500'],
-          [
-            { id: 'enterprise', buttonId: 'enterprise-tab', },
-            { id: 'personal', buttonId: 'personal-tab', },
-            { id: 'hobbie', buttonId: 'hobbie-tab', }
-          ]
-        )
-      })()
+    (function () {
+      tabController(
+        ['border-b', 'border-blue-500', 'text-blue-500'],
+        [
+          { id: 'enterprise', buttonId: 'enterprise-tab', },
+          { id: 'personal', buttonId: 'personal-tab', },
+          { id: 'game', buttonId: 'game-tab', }
+        ]
+      )
+    })()
   </script>
 </body>
 
