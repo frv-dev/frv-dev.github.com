@@ -1,1 +1,105 @@
-Testing
+<!doctype html>
+<html class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Felipe Vieira | Desenvolvedor Fullstack</title>
+  <meta name="description"
+    content="Oi, sou o Felipe Vieira, um dev web fullstack, e este é o meu site. Aqui você pode saber sobre meus projetos, experiências e portifólio.">
+
+  <meta name="author" content="Felipe Vieira">
+  <meta name="keywords"
+    content="Felipe, Vieira, Felipe Vieira, Felipe Renan Vieira, dev, dev fullstack, dev back-end, dev front-end, dev backend, dev frontend, backend, back-end, frontend, front-end">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./../css/tailwind.build.css">
+</head>
+
+<body class="bg-white dark:bg-black">
+  <div class="container mx-auto">
+    <main class="flex flex-col lg:flex-row text-center h-screen">
+      <section class="flex-initial my-auto lg:w-1/3 pt-10 lg:pt-0">
+        <div
+          class="relative w-3/6 sm:w-2/6 lg:w-4/6 xl:w-3/6 mx-auto rounded-full border-2 border-black dark:border-white">
+          <img src="./img/profile.jpg" alt="Felipe Vieira" class="rounded-full">
+          <button onclick="switchTheme()" class="
+            bg-white dark:bg-black
+            right-2 sm:right-3 lg:right-2 xl:right-1 2xl:right-4
+            bottom-0 sm:bottom-2
+            absolute rounded-full
+            w-12 h-12 border-2
+            border-black dark:border-white
+            text-yellow-500
+            transition duration-150
+          ">
+            <i class="fa-solid fa-moon text-3xl" id="themeButton"></i>
+          </button>
+        </div>
+
+        <h1 class="pt-3 text-3xl dark:text-white"><strong>Felipe Vieira</strong></h1>
+        <h2 class="text-base dark:text-white">Desenvolvedor Fullstack</h2>
+
+        <div class="flex flex-row mx-auto w-2/6 xl:w-2/6 lg:w-2/4 sm:w-1/4 pt-1">
+          <a href="https://github.com/frv-dev" target="_blank" rel="external nofollow" class="flex-initial w-1/4">
+            <i class="fa-brands fa-github text-2xl text-dark dark:text-white"></i>
+          </a>
+          <a href="https://linkedin.com/in/felipe-renan-vieira/" target="_blank" rel="external nofollow"
+            class="flex-initial w-1/4">
+            <i class="fa-brands fa-linkedin text-2xl text-blue-500"></i>
+          </a>
+          <a href="https://instagram.com/felipe.renan.vieira/" target="_blank" rel="external nofollow"
+            class="flex-initial w-1/4">
+            <i class="fa-brands fa-instagram text-2xl text-red-600"></i>
+          </a>
+          <a href="https://facebook.com/felipe.r.vieira.5" target="_blank" rel="external nofollow"
+            class="flex-initial w-1/4">
+            <i class="fa-brands fa-facebook text-2xl text-blue-500"></i>
+          </a>
+        </div>
+
+        <hr class="w-1/2 mx-auto mt-2 border-black dark:border-white">
+
+        <p class="text-sm dark:text-white mt-2 hover:underline"><a
+            href="mailto:feliperenanvieira@gmail.com">feliperenanvieira@gmail.com</a></p>
+      </section>
+
+      <section class="flex-initial my-auto lg:w-2/3 pt-10 lg:pt-0 pb-10 lg:pb-0">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mx-10 md:mx-24">
+          <a href="./sobre-mim/"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Sobre mim</strong></h3>
+            <p>Meu foco é ser dev back-end, mas tenho muito mais do que disso. Clique aqui para ver! 😁</p>
+          </a>
+          <a href="./portifolio/"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Portifólio</strong></h3>
+            <p>Agora os projetos, aqui você pode ver o que eu já desenvolvi. 😮</p>
+          </a>
+          <a href="./experiencia-e-educacao/"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Experiência e Educação</strong></h3>
+            <p>Faculdades, cursos, trabalhos, é aqui que você pode ver a minha carreira. 📖</p>
+          </a>
+          <a href="./Currículo.pdf" target="_blank"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2">
+            <h3 class="text-xl"><strong>Currículo</strong></h3>
+            <p>Também deixei aqui o meu currículo em <b>PDF</b> para você visualizar! 📝</p>
+          </a>
+          <a href="https://youtube.com/CodeEasy" target="_blank" rel="external nofollow"
+            class="bg-white dark:bg-black dark:text-white text-left p-5 rounded border-black border-2 dark:border-white md:col-span-2 md:col-start-2">
+            <h3 class="text-xl"><strong>Code Easy</strong></h3>
+            <p>Criei um projeto educativo para ensinar às outras pessoas sobre o mundo da programação. 👨‍💻</p>
+          </a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./../js/themeController.js"></script>
+</body>
+
+</html>
